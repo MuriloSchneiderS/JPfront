@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+a{
+    color: white;
+    text-decoration: none;
+    padding: 15px 35px;
+}
+a:hover{
+    background-color: white;
+    color: #287E1D;
+}
+ol{
+    padding-left: 4%;
+}
+ol li{
+    color: #287E1D;
+    font-size: 25px;
+}
+ul li{
+    list-style: none;
+    padding: 15px 0;
+}
+table{
+    text-align: center;
+}
+tr{
+    font-size: 25px;
+}
+th{
+    background-color: #1F5F15;
+    color: white;
+    padding: 25px;
+}
+td{
+    color: #287E1D;
+    border-bottom: solid gray 1px;
+    word-wrap: break-word;
+    padding: 15px;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #000, #287E1D);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1F5F15;
+} 
+/*CABEÇALHO*/
+header{
+    background-color: #287E1D;
+}
+header h1{
+    background-image: url(images/WhatsApp\ Image\ 2023-09-19\ at\ 20.51.29.jpeg);
+    color: white;
+    padding: 50px 15%;
+    text-align: center;
+}
+header menu ul{
+    display: flex;
+    justify-content: center;
+}
+/*MEIO*/
+main{
+    min-height: 470px;
+    padding: 0 35px;
+}
+main h1{
+    font-size: 35px;
+}
+main p{
+    color: #287E1D;
+    font-size: 25px;
+}
+/*RODAPÉ*/
+footer{
+    background-color: #287E1D;
+    color: white;
+}
+.rodape{
+    background-image: url(images/WhatsApp\ Image\ 2023-09-19\ at\ 20.51.29.jpeg);
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+}
+.rodape img{
+    height: 200px;
+    width: auto;
+}
+.rodape .container{
+    display: grid;
+    grid-template-columns: auto auto;
+    vertical-align: middle;
+    gap: 15px 200px;
+    padding: 75px 0;
+}
+.rodape .container div{
+    font-weight: bolder;
+    font-size: 20px;
+}
+.direitos{
+    text-align:center;
+    padding-top: 15px;
+}
+.direitos p{
+    vertical-align: bottom;
+}
+/*HTML*/
+main.meio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main.meio article{
+    width: 1600px;
+}
+article.HTML{
+    display: flex;
+    padding: 15px 0;
+}
+article.HTML img{
+    border-radius: 15px;
+    height: min-content;
+}
+article.HTML p{
+    padding-left: 50px;
+}
+.tabelaHTML{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+/*CSS*/
+.tabelaCSS{
+    display: flex;
+    justify-content: space-between;
+}
+.tabelaCSS img{
+    width: 350px;
+    height: min-content;
+    padding: 0 50px 0 15px;
+}
+/*DESEMPENHO*/
+.desempenho main{
+    background: linear-gradient(to bottom, #287E1D, #fff, #fff);
+}
+.sabo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
