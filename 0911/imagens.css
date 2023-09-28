@@ -1,0 +1,284 @@
+.imagens{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto auto;
+}
+.imagens img{
+    display: block;
+    object-fit: scale-down;
+    width: 300px;
+    height: 300px;
+    padding: 15px;
+    transition: 0.2s ease-in-out;
+}
+.imagens img:hover{
+    object-fit: contain;
+    transform: scale(1.7);
+    z-index: 2;
+}
+
+.estilo1{
+    border-radius: 50px;
+    transition: 0.2s ease-in-out;
+    width: 365px;
+    display: block;
+    height: auto;
+}
+.estilo1:hover{
+    border-radius: 0;
+}
+.container1 {
+    position: relative;
+    width: 365px;
+}
+.overlay1 {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #0041826a;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+}
+.container1:hover .overlay1 {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+.text1 {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+.box{
+    display: flex;
+    justify-content: center;
+    height: 600px;
+}
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box {
+    background-color: transparent;
+    width: 365px;
+    height: 100%;
+    border: 1px solid transparent;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+} 
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}  
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+}
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+/* Style the front side (fallback if image is missing) */
+.flip-box-front {
+    background-color: transparent;
+    color: black;
+}
+/* Style the back side */
+.flip-box-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.estilo3{
+    border-radius: 50px;
+    width: 100%;
+    opacity: 15%;
+    transition: 0.5s;
+    filter: grayscale(100%);
+}
+.estilo3:hover{
+    border-radius: 0;
+    filter: none;
+    opacity: 100%;
+}
+article.polaroid {
+    width: 365px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    background: linear-gradient(to bottom, transparent, #004282);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+}
+div.container {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.estilo4{
+    display: block;
+    width: 365px;
+    height: auto;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+}
+.estilo4:hover{
+    filter: grayscale(100%);
+}
+article.container{
+    position: relative;
+    width: 365px;
+}
+article.container:hover .estilo4 {
+    opacity: 0.3;
+}
+article.container:hover .middle {
+    opacity: 1;
+}
+div.middle{
+    transition: 0.5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+div.text{
+    background-color: #004282;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+}
+
+.estilo5{
+    transition: 0.5s;
+    display: block;
+    width: 365px;
+    height: auto;
+}
+.estilo5:hover{
+    transform: scaleX(-1);
+}
+.container5 {
+    position: relative;
+    width: 365px;
+}
+.overlay {
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    background: #0041826a;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+}
+.container5:hover .overlay {
+    width: 100%;
+    left: 0;
+}
+.text5 {
+    white-space: nowrap; 
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.estilo6 {
+    display: block;
+    width: 365px;
+    height: auto;
+}
+.container6 {
+    position: relative;
+    width: 365px;
+}
+.overlay6 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #004282;
+}
+.container6:hover .overlay6 {
+    opacity: 1;
+}
+.text6 {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.estilo7 {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.container7 {
+    position: relative;
+    width: 365px;
+}
+.overlay7 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #008CBA;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+.container7:hover .overlay7 {
+    height: 100%;
+}
+.text7 {
+    white-space: nowrap; 
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
