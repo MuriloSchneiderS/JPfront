@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulário</title>
+</head>
+<body>
+    <menu style="display:flex;justify-content:center;align-items:center;max-height: 20px;">
+        <a href="index.html"><img src="images/home_circle_icon_137496.png" alt="HOME" style="width:auto;height:20px;vertical-align:-25%;">HOME</a>
+    </menu>
+    <hr class="gradientAL">
+    <section><p>Informe sua idade + tempo empregado:</p>
+    <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+        <input type="range" class="slider" id="b" name="b" value="50" min="16" max="100" oninput="display.value=value" onchange="display.value=value">
+        <input type="text" id="display" value="50" size="1" readonly> +
+        <input type="number" id="a" name="a" value="0" min="0" max="100"/> =
+        <output name="result" for="a b">60</output>
+    </form>
+    </section>
+    <form action="#" method="get">
+        <section>
+            <fieldset><legend>Dados Pessoais*</legend>
+                <p>
+                    <label for="nome">Nome*:</label>
+                    <input type="text" id="nome" required>
+                </p>
+                <p>
+                    <label for="senha">Senha*:</label>
+                    <input type="password" id="senha" required>
+                </p>
+                <fieldset><legend>Contato*</legend>
+                    <input type="hidden" name="contatos" id="contatos" value="0">
+                    <p>
+                        <label for="email">E-mail:</label>
+                        <input type="email" name="contato" id="email" oninput="contatos.value=1">
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" name="contato" id="telefone" oninput="contatos.value=1">
+                    </p>
+                </fieldset>
+                <p>
+                    <label for="data">Data de nascimento*:</label>
+                    <input type="date" id="data" required>
+                </p>
+                <label for="estados-brasil">Endereço*:</label>
+                <select name="estados-brasil" required>
+                    <option value="X">Selecione seu Estado</option>
+                    <optgroup label="Norte">
+                        <option value="AC">Acre</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="PA">Pará</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="TO">Tocantins</option>
+                    </optgroup>
+                    <optgroup label="Nordeste">
+                        <option value="AL">Alagoas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="SE">Sergipe</option>
+                    </optgroup>
+                    <optgroup label="Centro-Oeste">
+                        <option value="DF">Distrito Federal</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                    </optgroup>
+                    <optgroup label="Sudeste">
+                        <option value="ES">Espírito Santo</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="SP">São Paulo</option>
+                    </optgroup>
+                    <optgroup label="Sul">
+                        <option value="PR">Paraná</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="SC">Santa Catarina</option>
+                    </optgroup>
+                </select>
+            </fieldset>
+        </section>
+        <section>
+            <hr>
+            <fieldset>
+                <p>
+                    <label for="sexo">Sexo:</label><br>
+                    <input type="radio" name="sexo" id="M">
+                    <label for="M">M</label><br>
+                    <input type="radio" name="sexo" id="F">
+                    <label for="F">F</label><br>
+                    <input type="radio" name="sexo" id="X">
+                    <label for="X">Prefiro não informar</label>
+                </p>
+                <p>
+                    <label for="pele">Cor de pele:</label>
+                    <select name="cores" id="pele">
+                        <option value="branco">Branco</option>
+                        <option value="moreno">Moreno</option>
+                        <option value="preto">Preto</option>
+                        <option value="amarelo">Amarelo</option>
+                        <option value="X">Prefiro não informar</option>
+                    </select>
+                </p>
+            </fieldset>
+        </section>
+        <section>
+            <hr>
+            <fieldset>
+                <p>
+                    Selecione cores que você gosta:
+                    <ul>
+                        <li><label for="azul">Azul</label>
+                        <input type="checkbox" id="azul"></li>
+                        
+                        <li><label for="verde">Verde</label>
+                        <input type="checkbox" id="verde"></li>
+
+                        <li><label for="vermelho">Vermelho:</label>
+                        <input type="checkbox" id="vermelho"></li>
+
+                        <li><label for="rosa">Rosa:</label>
+                        <input type="checkbox" id="rosa"></li>
+                    </ul>
+                </p>
+                <p>
+                    <label for="cor">Informe sua cor favorita:</label>
+                    <input type="color" id="cor">
+                </p>
+                <p>
+                    <label for="datetime">Seu aniversário: </label>
+                    <input type="datetime-local" name="data" id="datetime">
+                </p>
+                <label for="browser">Selecione seu navegador principal:</label>
+                <input list="navegadores" name="browser" id="browser">
+                <datalist id="navegadores">
+                  <option value="Edge">
+                  <option value="Firefox">
+                  <option value="Chrome">
+                  <option value="Opera">
+                  <option value="Safari">
+                </datalist>
+            </fieldset>
+        </section>
+        <section>
+            <hr>
+            <fieldset>
+                <p>
+                    <label for="arquivo">Forneça seu currículo: </label>
+                    <input type="file" id="arquivo">
+                </p>
+                <p>
+                    <label for="portfolio">Portfólio(url): </label>
+                    <input type="url" name="portfolio" id="portfolio">
+                </p>
+                <p>
+                    <label for="texto">Resumo profissional:</label><br>
+                    <textarea id="texto" cols="30" rows="10"></textarea>
+                </p>
+                
+            </fieldset>
+        </section>
+        <div>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Apagar Tudo">
+            </p>
+        </div>
+    </form>
+    <footer>
+        <hr class="foot">
+        <p>fontes: Não sabo</p>
+    </footer>
+</body>
+</html>
