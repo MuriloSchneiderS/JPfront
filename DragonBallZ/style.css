@@ -1,0 +1,152 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #2D2857;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0 auto;
+    width: auto;
+    min-width: 1000px;
+    max-width: 100%;
+}
+h1{
+    font-size: 30px;
+}
+p{
+    font-size: 30px;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+ul{
+    display: flex;
+}
+li{
+    list-style: none;
+}
+/*TOPO*/
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.logo img{
+    width: auto;
+    height: 150px;
+    padding: 15px 0;
+}
+header menu{
+    padding: 15px;
+    width: 100%;
+    background: #980006;
+}
+header ul{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 25px;
+}
+a:hover{
+    background: #F7921E;
+}
+header a{
+    color: #fff;
+    padding: 15px 75px;
+}
+/*MEIO*/
+.bemVindo{
+    display: flex;
+    background-color: #D5B926;
+}
+.textoAesq{
+    text-align: center;
+    padding: 150px 75px 0;
+}
+.bemVindo aside img{
+    width: auto;
+    height: 730px;
+}
+
+.OQueOferecemos{
+    background: #980006;
+    color: #fff;
+    text-align: center;
+    padding: 25px 200px 10px;
+}
+.container{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+.container div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+.BigBox{
+    background: #2D2857;
+    grid-column: span 3;
+    height: 100%;
+}
+.SmallBox{
+    background: #385619;
+    grid-column: span 2;
+    height: 100%;
+    width: 100%;
+}
+
+.Galeria{
+    background: #0C0700;
+    color: #fff;
+    text-align: center;
+    padding: 25px 200px;
+}
+.Galeria section{
+    display: flex;
+    justify-content: space-between;
+}
+.Galeria section img{
+    display: block;
+    object-fit: cover;
+    width: 286px;
+    height: 261px;
+    transition: 0.5s;
+}
+.Galeria section img:hover{
+    object-fit:contain;
+    transform:scale(1.3);
+    z-index: 2;
+}
+
+.Social{
+    background-color: #385619;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 0 25%;
+    font-size: 28px;
+}
+.Social a{
+    padding: 15px 0;
+}
+.Social a:hover{
+    padding: 15px 0;
+}
+/*RODAPÉ*/
+footer{
+    background: #D67611;
+    width: 100%;
+    height: auto;
+    padding: 15px 0;
+    text-align: center;
+}
+footer h1 img{
+    height: 75px;
+}
